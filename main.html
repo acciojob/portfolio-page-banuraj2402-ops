@@ -4,10 +4,84 @@
 
 <head>
 	<link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
 	<!-- the entire body must be written by student -->
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header, section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #3498db;
+            display: block; /* To center it if desired, though not required */
+            margin-bottom: 10px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        
+        <img src="data:image/jpeg;base64,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" alt="">
+        
+        <h1>Banu</h1>
+        
+        <p>
+            <a href="https://www.linkedin.com/in/yourprofile" target="_blank">View My LinkedIn Profile</a>
+        </p>
+    </header>
+
+    <section id="skills">
+        <h2>Technical Skills</h2>
+        <p>I am proficient in full-stack web development with a focus on modern, responsive, and scalable applications. My core competencies include:</p>
+        <ul>
+            <li><strong>Languages:</strong>JavaScript (ES6+), Python, HTML5, CSS3, SQL</li>
+            <li><strong>Frontend:</strong> React, Redux, Vue.js, jQuery</li>
+            <li><strong>Backend:</strong> Node.js, Express, Django, REST APIs</li>
+            <li><strong>Databases:</strong> PostgreSQL, MongoDB</li>
+            <li><strong>Tools & Version Control:</strong> Git, GitHub, Docker, AWS</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2> Featured Projects</h2>
+        
+        <ul>
+            <li>
+                E-commerce Platform: A full-stack application built with React and Node.js/Express, featuring user authentication, shopping cart functionality, and payment gateway integration.
+            </li>
+            <li>
+                Data Visualization Dashboard: A real-time data monitoring tool developed using Python/Django and D3.js for interactive charts and graphs.
+            </li>
+            <li>
+                Personal Blog: A simple, static site generator-based blog deployed on Netlify, focusing on performance and SEO optimization.
+            </li>
+        </ul>
+    </section>
     <script type="text/javascript" src="./script.js">
 </script>
 
